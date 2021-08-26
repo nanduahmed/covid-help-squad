@@ -11,13 +11,19 @@ const Dashboard = () => {
   const history = useHistory()
   const dispatch = useDispatch()
   const { me } = useSelector((state) => state.app)
+
+  const canViewAllRequests =
+    me.email === 'hazari.qawi@gmail.com' || me.email === 'nandu.ahmed@gmail.com'
+
   return (
     <div className={styles.root}>
       <div className={styles.container}>
         <h3 className={styles.greeting}>{`As salamo alaikum👋, ${
           me?.fullName || 'User'
         }`}</h3>
-        <h1 className={styles.title}>We are here to help</h1>
+        <h2 className={styles.title}>
+          We are serving our community and located around Masjid Noor
+        </h2>
         <Button
           label="Register for Food"
           className={`btn-purple-outline mt-4 ${styles.logout}`}
@@ -33,11 +39,24 @@ const Dashboard = () => {
           }}
         />
 
+        {canViewAllRequests && (
+          <Button
+            label="All Requests"
+            className={`btn-purple-outline mt-4 ${styles.logout}`}
+            onClick={() => {
+              history.push(path.allRequests)
+            }}
+          />
+        )}
+
         <Button
           label="Logout"
           className={`btn-purple-outline mt-4 ${styles.logout}`}
           onClick={() => dispatch(actions.logout())}
         />
+        <a href="whatsapp://send?text=Assalamo alaikum&phone=++19253258924">
+          Contact
+        </a>
       </div>
     </div>
   )

@@ -40,7 +40,8 @@
     "lint": "node_modules/.bin/eslint src/ --quiet --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'"
+    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
+    "deploy": "firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": [

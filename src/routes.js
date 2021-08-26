@@ -7,6 +7,7 @@ import Fallback from 'components/Fallback'
 import Spinner from 'components/Spinner'
 import RegisterFood from 'pages/register/RegisterFood'
 import MyRequests from 'pages/register/MyRequests'
+import AllRequests from 'pages/register/AllRequests'
 
 const Auth = React.lazy(() => import('./pages/auth'))
 const Dashboard = React.lazy(() => import('./pages/dashboard'))
@@ -47,6 +48,9 @@ function Router() {
             </Route>
             <Route path={path.myRequests}>
               <MyRequests />
+            </Route>
+            <Route path={path.allRequests}>
+              <AllRequests />
             </Route>
             <Redirect to={path.dashboard} />
           </Switch>

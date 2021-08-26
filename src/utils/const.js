@@ -7,4 +7,5 @@ export const path = {
   dashboard: '/dashboard',
   registerHelp: '/register-help',
   myRequests: '/my-requests',
+  allRequests: '/all-requests',
 }
