@@ -19,7 +19,7 @@ const Dashboard = () => {
         }`}</h3>
         <h1 className={styles.title}>We are here to help</h1>
         <Button
-          label="Register"
+          label="Register for Food"
           className={`btn-purple-outline mt-4 ${styles.logout}`}
           onClick={() => {
             history.push(path.registerHelp)

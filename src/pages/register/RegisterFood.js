@@ -10,7 +10,7 @@ const RegisterFood = () => {
   const history = useHistory()
   const { me } = useSelector((state) => state.app)
   const [data, setData] = useState({ name: me?.fullName, email: me?.email })
-  const [error, setError] = useState({})
+  const [error, setError] = useState('')
 
   const onChange = (label, value) => {
     const newD = { ...data, ...{ [label]: value } }
