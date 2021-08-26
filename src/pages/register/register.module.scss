@@ -1,0 +1,24 @@
+@import '../../theme/core.scss';
+
+.registerContainer {
+  background: $dark-gray;
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-top: 15px;
+}
+
+.textP {
+  color: chartreuse;
+  margin-right: 5px;
+}
+
+.save {
+  margin-top: 20px;
+}

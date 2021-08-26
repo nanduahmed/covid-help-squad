@@ -5,6 +5,7 @@ import { actions } from 'slices/app.slice'
 import { path } from 'utils/const'
 import Fallback from 'components/Fallback'
 import Spinner from 'components/Spinner'
+import RegisterFood from 'pages/register/RegisterFood'
 
 const Auth = React.lazy(() => import('./pages/auth'))
 const Dashboard = React.lazy(() => import('./pages/dashboard'))
@@ -39,6 +40,9 @@ function Router() {
           <Switch>
             <Route path={path.dashboard}>
               <Dashboard />
+            </Route>
+            <Route path={path.registerHelp}>
+              <RegisterFood />
             </Route>
             <Redirect to={path.dashboard} />
           </Switch>
