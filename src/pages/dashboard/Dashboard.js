@@ -25,6 +25,13 @@ const Dashboard = () => {
             history.push(path.registerHelp)
           }}
         />
+        <Button
+          label="My Requests"
+          className={`btn-purple-outline mt-4 ${styles.logout}`}
+          onClick={() => {
+            history.push(path.myRequests)
+          }}
+        />
 
         <Button
           label="Logout"
